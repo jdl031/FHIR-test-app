@@ -25,6 +25,7 @@ class Navigation extends Component {
       <div className={cx(s.root, this.props.className)} role="navigation">
         <a className={s.link} href="/about" onClick={Link.handleClick}>About</a>
         <a className={s.link} href="/contact" onClick={Link.handleClick}>Contact</a>
+        <a className={s.link} href="/patient" onClick={Link.handleClick}>Patient</a>
         <span className={s.spacer}> | </span>
         <a className={s.link} href="/login" onClick={Link.handleClick}>Log in</a>
         <span className={s.spacer}>or</span>
