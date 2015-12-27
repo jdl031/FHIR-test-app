@@ -8,6 +8,7 @@
  */
 
 import React, { Component, PropTypes } from 'react';
+import PatientSearch from './PatientSearch';
 import s from './PatientPage.scss';
 import withStyles from '../../decorators/withStyles';
 
@@ -29,7 +30,7 @@ class PatientPage extends Component {
       <div className={s.root}>
         <div className={s.container}>
           <h1>{title}</h1>
-          <p>Patient stuff goes here</p>
+          <PatientSearch />
         </div>
       </div>
     );
