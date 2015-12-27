@@ -27,7 +27,7 @@ class Header extends Component {
           </a>
           <div className={s.banner}>
             <h1 className={s.bannerTitle}>React</h1>
-            <p className={s.bannerDesc}>Complex web apps made easy</p>
+            <p className={s.bannerDesc}>Complex web apps made complicated</p>
           </div>
         </div>
       </div>

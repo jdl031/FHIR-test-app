@@ -15,6 +15,7 @@ import ContentPage from './components/ContentPage';
 import ContactPage from './components/ContactPage';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
+import PatientPage from './components/PatientPage';
 import NotFoundPage from './components/NotFoundPage';
 import ErrorPage from './components/ErrorPage';
 
@@ -29,6 +30,8 @@ const router = new Router(on => {
   on('/login', async () => <LoginPage />);
 
   on('/register', async () => <RegisterPage />);
+
+  on('/patient', async () => <PatientPage />);
 
   on('*', async (state) => {
     const response = await fetch(`/api/content?path=${state.path}`);
