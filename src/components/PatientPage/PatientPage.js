@@ -9,6 +9,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import PatientSearch from './PatientSearch';
+import PatientTable from './PatientTable';
 import s from './PatientPage.scss';
 import withStyles from '../../decorators/withStyles';
 
@@ -31,8 +32,11 @@ class PatientPage extends Component {
         <div className={s.container}>
           <h1>{title}</h1>
           <PatientSearch />
+          <hr>
+          <PatientTable entries={this.state.entry}/>
         </div>
       </div>
+
     );
   }
 
