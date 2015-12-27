@@ -9,6 +9,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import PatientSearch from './PatientSearch';
+import PatientTable from './PatientTable';
 import s from './PatientPage.scss';
 import withStyles from '../../decorators/withStyles';
 
@@ -48,8 +49,17 @@ class PatientPage extends Component {
             onChange={this.onChange.bind(this)}
             onSubmit={this.log}
           />
+          <hr></hr>
+          <PatientTable entries={[{
+            name: {
+              given: ['first'],
+              family: ['last'],
+            },
+            fullUrl: 'url',
+          }]}/>
         </div>
       </div>
+
     );
   }
 
