@@ -21,8 +21,21 @@ class PatientPage extends Component {
     onSetTitle: PropTypes.func.isRequired,
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchText: 'initial text',
+    };
+  }
+
   componentWillMount() {
     this.context.onSetTitle(title);
+  }
+
+  onChange(val) {
+    this.setState({
+      searchText: val.searchText,
+    });
   }
 
   render() {
@@ -30,7 +43,11 @@ class PatientPage extends Component {
       <div className={s.root}>
         <div className={s.container}>
           <h1>{title}</h1>
-          <PatientSearch />
+          <PatientSearch
+            searchText={this.state.searchText}
+            onChange={this.onChange.bind(this)}
+            onSubmit={this.log}
+          />
         </div>
       </div>
     );
